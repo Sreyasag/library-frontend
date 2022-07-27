@@ -9,7 +9,7 @@
     <input type="password" id="password" formControlName="password" >
 
     <label for="confirmPassword">Confirm Password</label>
-    <input type="password" id="confirmPassword" formControlName="confirmPassword">
+    <input type="password" id="confirmPassword" formControlName="confirmPassword" [ngClass]="{err: signUpForm.errors?.['passwordMismatch']}">
 
     <input type="submit" [disabled]="signUpForm.invalid" >
 </form>

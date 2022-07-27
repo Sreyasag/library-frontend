@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -10,7 +12,7 @@ export class SignUpComponent implements OnInit {
 
   signUpForm!:FormGroup;
 
-  constructor() { }
+  constructor(private auth:AuthService, private router:Router) { }
 
   ngOnInit(): void {
     this.signUpForm = new FormGroup({
@@ -22,10 +24,20 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.signUpForm);
+    this.auth.signUp(this.signUpForm.value).subscribe((data:any) => {
+      console.log(data);
+      
+      if(data.status==='success'){
+        this.auth.storeUserData(data.token, data.user);
+        this.router.navigate([''])
+      }
+
+      /////handle error for this one here
+    });
     
   }
 
+  //password match validator
   matchPassword(form:AbstractControl){
     const {password, confirmPassword } = form.value
     if(password === confirmPassword){

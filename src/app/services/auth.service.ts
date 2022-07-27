@@ -25,6 +25,11 @@ export class AuthService {
     this.token = token;
   }
 
+  //Register user
+  signUp(userData:any){
+    return this.http.post(`${this.root}/users/signup`, userData);
+  }
+
   //log user out
   logOut(){
     this.currentUser = undefined;

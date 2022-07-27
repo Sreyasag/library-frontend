@@ -13,5 +13,6 @@
   <small *ngIf="pass.touched && !pass.dirty">Please enter password</small>
 
   <button type="submit" [disabled]="logInForm.invalid">Submit</button>
+  {{loginError}}
 </form>
 
