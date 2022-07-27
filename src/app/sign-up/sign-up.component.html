@@ -12,5 +12,6 @@
     <input type="password" id="confirmPassword" formControlName="confirmPassword" [ngClass]="{err: signUpForm.errors?.['passwordMismatch']}">
 
     <input type="submit" [disabled]="signUpForm.invalid" >
+    {{signUpError}}
 </form>
 

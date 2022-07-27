@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-books',
@@ -8,10 +8,20 @@ import { DataService } from '../services/data.service';
 })
 export class BooksComponent implements OnInit {
   booksData: any;
-  constructor(private data: DataService) { }
+  constructor(private http: HttpService) { }
 
   ngOnInit(): void {
-    this.booksData = this.data.books
+    this.http.get('books').subscribe(
+      {
+        next:(response:any)=>{
+          console.log(response);
+          this.booksData= response.data;
+        },
+        error:(err)=>{
+          console.log(err.message)
+        }
+      }
+    )
   }
 
 }

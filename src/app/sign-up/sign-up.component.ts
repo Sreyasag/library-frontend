@@ -11,6 +11,7 @@ import { AuthService } from '../services/auth.service';
 export class SignUpComponent implements OnInit {
 
   signUpForm!:FormGroup;
+  signUpError:any;
 
   constructor(private auth:AuthService, private router:Router) { }
 
@@ -24,17 +25,20 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(){
-    this.auth.signUp(this.signUpForm.value).subscribe((data:any) => {
-      console.log(data);
-      
-      if(data.status==='success'){
-        this.auth.storeUserData(data.token, data.user);
-        this.router.navigate([''])
+    this.auth.signUp(this.signUpForm.value).subscribe(
+      {
+        next: (data:any)=>{
+          if(data.status==='success'){
+            this.auth.storeUserData(data.token, data.user);
+            this.router.navigate([''])
+          }
+        },
+        error: (err)=>{
+          console.log(err);      
+          this.signUpError = err.message;
+        } 
       }
-
-      /////handle error for this one here
-    });
-    
+    )
   }
 
   //password match validator

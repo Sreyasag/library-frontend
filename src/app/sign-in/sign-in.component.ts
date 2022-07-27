@@ -20,18 +20,21 @@ export class SignInComponent implements OnInit {
   }
 
   onSubmit(){
-    this.auth.login(this.logInForm.value)
-    .subscribe((data:any)=>{
-        if(data.status==='success'){
-          this.auth.storeUserData(data.token, data.user);
-          this.router.navigate([''])
-        }
-      },
-      (err)=>{
-        console.log(err);      
-        this.loginError = err.message;
+    this.auth.login(this.logInForm.value).subscribe(
+      {
+        next: (data:any)=>{
+          if(data.status==='success'){
+            this.auth.storeUserData(data.token, data.user);
+            this.router.navigate([''])
+          }
+        },
+        error: (err)=>{
+          console.log(err);      
+          this.loginError = err.message;
+        } 
       }
     )
+
   }
 
 }
@@ -40,7 +43,21 @@ export class SignInComponent implements OnInit {
 
 
 // temp
-/////////////
+//////////////////////
+// .subscribe((data:any)=>{
+//   if(data.status==='success'){
+//     this.auth.storeUserData(data.token, data.user);
+//     this.router.navigate([''])
+//   }
+// },
+// (err)=>{
+//   console.log(err);      
+//   this.loginError = err.message;
+// }
+// )
+//
+///////////////////////
+//
 // .pipe(
 //   map((data:any)=>{
 //     if(data.status==='success'){

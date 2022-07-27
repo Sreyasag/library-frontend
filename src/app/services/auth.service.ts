@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  token: string|undefined;
+  token: any;
   currentUser: any;
   root = 'http://localhost:3000';
 
@@ -15,14 +15,6 @@ export class AuthService {
   //Log user in
   login(loginData: { email: string; password: string }) {
     return this.http.post(`${this.root}/users/login`, loginData);
-  }
-
-  //Store token and user data in localstorage(also in authService)
-  storeUserData (token:string, user:any) {
-    localStorage.setItem('id_token', token);
-    localStorage.setItem('currentUser', JSON.stringify(user));
-    this.currentUser = user;
-    this.token = token;
   }
 
   //Register user
@@ -36,4 +28,22 @@ export class AuthService {
     this.token = undefined;
     localStorage.clear();
   }
+
+  //Store token and user data in localstorage(also in authService)
+  storeUserData (token:string, user:any) {
+    localStorage.setItem('id_token', token);
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    this.currentUser = user;
+    this.token = token;
+  }
+
+  //Set Authorization token in header
+  createTokenHeader(){
+    if(!this.token) this.token = localStorage.getItem('id_token');
+    let headers = new HttpHeaders({
+      "Authorization":this.token
+    });
+    return headers;
+  }
+
 }
