@@ -1,1 +1,3 @@
-<p>books works!</p>
+<div class="booksContainer" >
+    <app-card *ngFor="let item of booksData" class="book" [data]="item"></app-card>
+</div>

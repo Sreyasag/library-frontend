@@ -1,0 +1,11 @@
+.booksContainer{
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+
+}
+.book{
+    /* flex: 1; */
+}

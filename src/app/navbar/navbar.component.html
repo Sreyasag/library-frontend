@@ -2,7 +2,9 @@
     <h3 class="title">_sg</h3>
     <div class="navLinks">
         <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="">Home</a>
-        <a routerLinkActive="active" routerLink="projects">new</a>
-        <a routerLinkActive="active" routerLink="about">user</a>
+        <a routerLinkActive="active" routerLink="signin">signin</a>
+        <a routerLinkActive="active" routerLink="signup">signup</a>
+        <a routerLinkActive="active"  (click)="onLogOut()">signout</a>
+
     </div>
 </nav>

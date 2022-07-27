@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 .card1{
+    padding: 1rem;
     border: 1px solid rgba(144, 144, 144, 0.608);
     border-radius: .3rem;
     box-shadow: 1px 2px 5px 1px rgba(128, 128, 128, 0.333)  ;

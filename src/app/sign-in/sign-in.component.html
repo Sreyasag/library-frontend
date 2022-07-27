@@ -1,1 +1,17 @@
-<p>sign-in works!</p>
+<h2>Login</h2>
+<form (submit)="onSubmit()" #logInForm="ngForm">
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email" ngModel required email #email="ngModel"/>
+  <small *ngIf="email.touched && email.invalid">Please enter valid email</small>
+  <!-- <ng-container *ngIf="email.touched && email.invalid && email.errors" >
+    <ng-container *ngIf="email.errors["required"]"> enter an email</ng-container>
+    <ng-container *ngIf="email.errors["email"]"> enter an email</ng-container>
+  </ng-container> -->
+  
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" ngModel required minlength="8" #pass="ngModel"/>
+  <small *ngIf="pass.touched && !pass.dirty">Please enter password</small>
+
+  <button type="submit" [disabled]="logInForm.invalid">Submit</button>
+</form>
+
