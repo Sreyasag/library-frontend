@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { HttpService } from '../services/http.service';
@@ -19,25 +19,22 @@ export class AddBookComponent implements OnInit {
 
   ngOnInit(): void {
     this.addBookForm = new FormGroup({
-      title: new FormControl(null),
-      author: new FormControl(null),
-      category: new FormControl(null),
-      year: new FormControl(null),
-      description: new FormControl(null),
-      pages: new FormControl(null),
-      image: new FormControl(null),
+      title: new FormControl(null, Validators.required),
+      author: new FormControl(null, Validators.required ),
+      category: new FormControl(null, Validators.required),
+      year: new FormControl(null, Validators.required),
+      description: new FormControl(null, Validators.required),
+      pages: new FormControl(null, Validators.required),
+      image: new FormControl(null, Validators.required),
       addedBy: new FormControl(null),
     })
   }
 
   onSubmit(){
     this.addBookForm.value.addedBy = this.auth.currentUser._id;
-    console.log(this.addBookForm);////////////////remove
     
     this.http.post('books', this.addBookForm.value).subscribe({
-      next:(data) => {
-        console.log(data);/////////////////remove
-        
+      next:(data) => {       
         this.router.navigate(['']);
       },
       error:(err)=>{
@@ -46,6 +43,5 @@ export class AddBookComponent implements OnInit {
       } 
     })
   }
-  
 
 }

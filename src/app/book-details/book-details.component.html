@@ -1,0 +1,7 @@
+<h2>Details</h2>
+{{bookData|json}}
+{{err}}
+
+<button routerLink="/books/{{bookId}}/edit" >edit</button>
+<button (click)="deleteBook()" >delete</button>
+{{errorOnDelete}}

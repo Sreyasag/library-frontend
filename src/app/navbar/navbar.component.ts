@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {}
 
   onLogOut(){
+    alert("bye!! See you soon")
     this.auth.logOut();
     this.router.navigate(['signin'])
   }

@@ -11,7 +11,10 @@ import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './books/card/card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AddBookComponent } from './add-book/add-book.component'
+import { AddBookComponent } from './add-book/add-book.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
+import { UserProfileComponent } from './user-profile/user-profile.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { AddBookComponent } from './add-book/add-book.component'
     SignUpComponent,
     FooterComponent,
     CardComponent,
-    AddBookComponent
+    AddBookComponent,
+    BookDetailsComponent,
+    EditBookComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
