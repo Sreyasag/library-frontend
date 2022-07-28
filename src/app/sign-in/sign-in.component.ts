@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { catchError, map, ObservableInput, of } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 @Component({

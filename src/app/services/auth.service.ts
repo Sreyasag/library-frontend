@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   token: any;
-  currentUser: any;
+  currentUser: any= this.getCurrentUser();
   root = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {}
@@ -44,6 +45,22 @@ export class AuthService {
       "Authorization":this.token
     });
     return headers;
+  }
+
+  //Check whether user is currently logged in
+  isLoggedIn(){
+    if(!this.token) this.token = localStorage.getItem('id_token');
+    const helper = new JwtHelperService();
+    return !helper.isTokenExpired(this.token);
+  }
+
+  //get current userdata from localstorage
+  getCurrentUser(){
+    if(!this.currentUser){
+      let user= localStorage.getItem('currentUser');
+      user ? this.currentUser= JSON.parse(user) : 0;
+    }
+    return this.currentUser
   }
 
 }

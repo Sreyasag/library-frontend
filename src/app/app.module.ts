@@ -10,7 +10,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './books/card/card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { AddBookComponent } from './add-book/add-book.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http'
     SignInComponent,
     SignUpComponent,
     FooterComponent,
-    CardComponent
+    CardComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,

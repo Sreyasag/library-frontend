@@ -1,10 +1,10 @@
 <nav class="card1">    
     <h3 class="title">_sg</h3>
     <div class="navLinks">
-        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="">Home</a>
-        <a routerLinkActive="active" routerLink="signin">signin</a>
-        <a routerLinkActive="active" routerLink="signup">signup</a>
-        <a routerLinkActive="active"  (click)="onLogOut()">signout</a>
-
+        <a *ngIf="this.auth.isLoggedIn()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="">Home</a>
+        <a *ngIf="this.auth.isLoggedIn()" routerLinkActive="active" routerLink="books/add">Add</a>
+        <a *ngIf="!this.auth.isLoggedIn()" routerLinkActive="active" routerLink="signin">signin</a>
+        <a *ngIf="!this.auth.isLoggedIn()" routerLinkActive="active" routerLink="signup">signup</a>
+        <a *ngIf="this.auth.isLoggedIn()" routerLinkActive="active"  (click)="onLogOut()">signout</a>
     </div>
 </nav>

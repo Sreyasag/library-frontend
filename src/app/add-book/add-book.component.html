@@ -1,0 +1,19 @@
+<h2>Add book details</h2>
+<form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
+    <label for="title">Title</label>
+    <input id="title"  type="text" formControlName="title" >
+    <label for="author">Author</label>
+    <input id="author"  type="text" formControlName="author" >
+    <label for="category   ">Category </label>
+    <input id="category"  type="text" formControlName="category" >
+    <label for="year">Year</label>
+    <input id="year"  type="number" formControlName="year" >
+    <label for="description">Description</label>
+    <input id="description"  type="text" formControlName="description" >
+    <label for="pages">Pages</label>
+    <input id="pages"  type="number" formControlName="pages" >
+    <label for="image">Image url</label>
+    <input id="image"  type="text" formControlName="image" >
+    <input type="submit" [disabled]="!addBookForm.valid">
+</form>
+{{addBookError}}
