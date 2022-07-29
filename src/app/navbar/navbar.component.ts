@@ -9,9 +9,13 @@ import { AuthService } from '../services/auth.service';
 })
 export class NavbarComponent implements OnInit {
 
+  user:any;
+
   constructor(public auth: AuthService, private router :Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.user = this.auth.getCurrentUser();
+  }
 
   onLogOut(){
     alert("bye!! See you soon")
