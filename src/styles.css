@@ -5,3 +5,13 @@
     border-radius: .3rem;
     box-shadow: 1px 2px 5px 1px rgba(128, 128, 128, 0.333)  ;
 }
+
+.err{
+    color: rgb(250, 80, 80);
+    padding: 2px;
+}
+
+/* html{
+    background-color: black !important;
+    color: aliceblue !important;
+} */
