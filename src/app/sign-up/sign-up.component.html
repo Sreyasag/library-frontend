@@ -1,17 +1,40 @@
-<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
-    <label for="name">Username</label>
-    <input type="text" id="name" formControlName="name">
+<div class="card1">
+    <div class="wrapper ">
+        <h4>Register</h4 >
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <label for="name">Username</label>
+            <input type="text" id="name" formControlName="name">
+            <div class="err" *ngIf="signUpForm.controls['name'].dirty && signUpForm.controls['name'].errors?.['required']">
+                Please enter username  
+            </div>
+        
+            <label for="email">Email</label>
+            <input type="text" id="email" formControlName="email" >
+            <div class="err" *ngIf="signUpForm.controls['email'].dirty && signUpForm.controls['email'].errors?.['required']">
+                Please enter email
+            </div>
+            <div class="err" *ngIf="signUpForm.controls['email'].dirty && signUpForm.controls['email'].errors?.['email']">
+                Email is invalid
+            </div>
+        
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" >
+            <div class="err" *ngIf="signUpForm.controls['password'].dirty && signUpForm.controls['password'].errors?.['required']">
+                Please enter password
+            </div>
+        
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" formControlName="confirmPassword" [ngClass]="{err1: signUpForm.errors?.['passwordMismatch']}">
+            <div class="err" *ngIf="signUpForm.controls['confirmPassword'].dirty && signUpForm.controls['confirmPassword'].errors?.['required']">
+                Please confirm password
+            </div>
+            <div class="err" *ngIf="signUpForm.controls['confirmPassword'].dirty &&signUpForm.errors?.['passwordMismatch']">
+                Passwords do not match
+            </div>
 
-    <label for="email">Email</label>
-    <input type="text" id="email" formControlName="email" >
-
-    <label for="password">Password</label>
-    <input type="password" id="password" formControlName="password" >
-
-    <label for="confirmPassword">Confirm Password</label>
-    <input type="password" id="confirmPassword" formControlName="confirmPassword" [ngClass]="{err: signUpForm.errors?.['passwordMismatch']}">
-
-    <input type="submit" [disabled]="signUpForm.invalid" >
-    {{signUpError}}
-</form>
-
+            <div>
+                <input type="submit" class="btn btn-primary" [disabled]="signUpForm.invalid" >
+            </div>
+        </form>
+    </div>
+</div>

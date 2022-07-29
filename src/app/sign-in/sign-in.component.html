@@ -1,44 +1,42 @@
 <div class="">
   <div class="row">
-    <div class="col-sm-8">
-      <div class="card1">
-  
-      </div>
-    </div>
-    <div class="col-sm-4">
+    <div class="col-md-5">
       <div class="card1">
         <div>
           <h4>Login</h4 >
-            <form (submit)="onSubmit()" #logInForm="ngForm">
-              <div>
-                <label for="email">Email</label>
-              </div>
-              <div>
-                <input type="text" id="email" name="email" ngModel required email #email="ngModel"/>
-                <div class="err" *ngIf="email.touched && email.invalid">Please enter a valid email</div>
-                <!-- <ng-container *ngIf="email.touched && email.invalid && email.errors" >
-                  <ng-container *ngIf="email.errors["required"]"> enter an email</ng-container>
-                  <ng-container *ngIf="email.errors["email"]"> enter an email</ng-container>
-                </ng-container> -->
-              </div>
-              <div>
-                <label for="password">Password:</label>
-              </div>
-              <div>
-                <input type="password" id="password" name="password" ngModel required minlength="8" #pass="ngModel"/>
-                <div class="err" *ngIf="pass.touched && !pass.dirty">Please enter password</div>  
-                <div class="err" *ngIf="pass.dirty && pass.invalid">Password must be atleast 8 characters long</div>  
-          
-              </div> 
-              <button type="submit" class="btn btn-primary" [disabled]="logInForm.invalid">Login</button>
-              <p class="err" *ngIf="loginError">Something went wrong. Please try again.</p>
-            </form>
+          <form (submit)="onSubmit()" #logInForm="ngForm">
+            <div>
+              <label for="email">Email</label>
+            </div>
+            <div>
+              <input type="text" id="email" name="email" ngModel required email #email="ngModel"/>
+              <div class="err" *ngIf="email.dirty && email.invalid">Please enter a valid email</div>
+              <!-- <ng-container *ngIf="email.touched && email.invalid && email.errors" >
+                <ng-container *ngIf="email.errors["required"]"> enter an email</ng-container>
+                <ng-container *ngIf="email.errors["email"]"> enter an email</ng-container>
+              </ng-container> -->
+            </div>
+            <div>
+              <label for="password">Password:</label>
+            </div>
+            <div>
+              <input type="password" id="password" name="password" ngModel required minlength="8" #pass="ngModel"/>
+              <div class="err" *ngIf="!pass.value && pass.dirty">Please enter password</div>  
+              <div class="err" *ngIf="pass.dirty && pass.invalid">Must be atleast 8 characters long</div>  
+        
+            </div> 
+            <button type="submit" class="btn btn-primary" [disabled]="logInForm.invalid">Login</button>
+            <div *ngIf="loading">loading...</div>
+            <p class="err" *ngIf="loginError && !loading">Something went wrong. Please try again.</p>
+          </form>
         </div>
       </div>
     </div>
+    <div class="col-md-7">
+      <div class="card1">
+        
+      </div>
+    </div>
   </div>
-  
-  
-  
-  
+
 </div>

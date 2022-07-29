@@ -1,4 +1,4 @@
-input.ng-invalid.ng-touched {
+input.ng-invalid.ng-dirty {
     border:1px solid hsl(9, 94%, 68%);
     border-radius: 2px;
     /* box-shadow: 1px 1px 5px 1px red; */
