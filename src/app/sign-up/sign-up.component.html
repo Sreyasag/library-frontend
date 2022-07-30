@@ -1,7 +1,7 @@
 <div class="card1">
     <div class="wrapper ">
         <h4>Register</h4 >
-        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <form  [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
             <label for="name">Username</label>
             <input type="text" id="name" formControlName="name">
             <div class="err" *ngIf="signUpForm.controls['name'].dirty && signUpForm.controls['name'].errors?.['required']">

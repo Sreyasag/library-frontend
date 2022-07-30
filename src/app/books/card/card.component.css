@@ -1,0 +1,15 @@
+
+.card1{
+    margin: 1rem;
+}
+.group{
+    display: flex;
+    justify-content: space-between;
+
+}
+.author{
+    font-weight: bold;
+}
+.details{
+    width: 100%;
+}

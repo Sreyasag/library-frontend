@@ -1,5 +1,23 @@
 <div class="card1">
-    <h3>{{data.title}}</h3>
-    <p>{{data.author}}</p>
-    <button routerLink="/books/{{data._id}}">details</button>
+    <div class="image">
+        <img src="" alt="">
+    </div>
+    <div class="title">
+        <h3>{{data.title}}</h3>
+    </div>
+    <div class="author">
+        <p>{{data.author}}</p>
+    </div>
+    <div class="group">
+        <div class="category">
+            <p>{{data.category}}</p>
+        </div>
+        <div class="pages">
+            <p>{{data.pages}} pages</p>
+        </div>
+    </div>
+    <div >
+        <button class="details" routerLink="/books/{{data._id}}">details</button>
+    </div>
+
 </div>

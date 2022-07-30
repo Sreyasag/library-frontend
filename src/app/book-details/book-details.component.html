@@ -1,4 +1,21 @@
-<h2>Details</h2>
+<div class="title">
+    <h3>{{bookData.title}}</h3>
+</div>
+<div class="image">
+    <img src="" alt="">
+</div>
+<div class="author">
+    <p>{{bookData.author}}</p>
+</div>
+<div class="group">
+    <div class="category">
+        <p>{{bookData.category}}</p>
+    </div>
+    <div class="pages">
+        <p>{{bookData.pages}} pages</p>
+    </div>
+</div>
+
 {{bookData|json}}
 {{err}}
 
