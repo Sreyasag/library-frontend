@@ -14,6 +14,7 @@ export class EditBookComponent implements OnInit {
   editBookError:any;
   errorOnGetData:any;
   bookId:any;
+  book:any;
 
   constructor(private http:HttpService,private activatedRoute:ActivatedRoute,private router:Router) { }
 
@@ -22,17 +23,17 @@ export class EditBookComponent implements OnInit {
     this.bookId = this.activatedRoute.snapshot.paramMap.get('id')
     this.http.get(`books/${this.bookId}`).subscribe({
       next:(response:any)=>{
-        const book = response.data;
+        this.book = response.data;
         this.editBookForm = new FormGroup({
-          title: new FormControl(book.title , Validators.required),
-          author: new FormControl(book.author , Validators.required ),
-          category: new FormControl(book.category , Validators.required),
-          year: new FormControl(book.year , Validators.required),
-          description: new FormControl(book.description , Validators.required),
-          pages: new FormControl(book.pages , Validators.required),
-          image: new FormControl(book.image , Validators.required),
+          title: new FormControl(this.book.title , Validators.required),
+          author: new FormControl(this.book.author , Validators.required ),
+          category: new FormControl(this.book.category , Validators.required),
+          year: new FormControl(this.book.year , Validators.required),
+          description: new FormControl(this.book.description , Validators.required),
+          pages: new FormControl(this.book.pages , Validators.required),
+          image: new FormControl(this.book.image , Validators.required),
         })
-      },
+    },
       error:(error)=>{
         this.errorOnGetData = error
       }

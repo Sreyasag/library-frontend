@@ -15,3 +15,11 @@ input.ng-invalid.ng-dirty {
     margin: 0.5rem 0;   
 }
 
+.signin{
+    display: inline;
+    text-align: center;
+    background-color: rgba(194, 227, 251, 0.451);
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    margin: .5rem;
+}

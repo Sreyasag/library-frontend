@@ -1,0 +1,47 @@
+
+.card1{
+    margin: 1rem 0;
+    text-align: center;
+}
+img{
+    width:100%;
+    border-radius: 0.2rem;
+    
+}
+.title{
+    padding: 2rem 0 1rem 0;
+}
+.group{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.item{
+    background-color: rgba(194, 227, 251, 0.451);
+    border-radius: 2rem;
+    padding: .5rem;
+    margin: .5rem;
+    min-width: 200px;
+}
+
+.details{
+    
+    /* background-color: rgba(194, 227, 251, 0.451); */
+    border: 0 ;
+    padding: 1rem;
+    margin: 1rem;
+}
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 0 1rem 0 ;
+
+}
+.btn{
+    background-color: rgb(90, 158, 252);
+    border:0;
+    width: 46%;   
+    padding: 1rem 0;
+    font-weight: bold;
+}

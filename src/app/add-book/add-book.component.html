@@ -1,19 +1,49 @@
-<h2>Add book details</h2>
-<form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
-    <label for="title">Title</label>
-    <input id="title"  type="text" formControlName="title" >
-    <label for="author">Author</label>
-    <input id="author"  type="text" formControlName="author" >
-    <label for="category   ">Category </label>
-    <input id="category"  type="text" formControlName="category" >
-    <label for="year">Year</label>
-    <input id="year"  type="number" formControlName="year" >
-    <label for="description">Description</label>
-    <input id="description"  type="text" formControlName="description" >
-    <label for="pages">Pages</label>
-    <input id="pages"  type="number" formControlName="pages" >
-    <label for="image">Image url</label>
-    <input id="image"  type="text" formControlName="image" >
-    <input type="submit" [disabled]="!addBookForm.valid">
-</form>
-{{addBookError}}
+<div class="card1">
+    
+    <form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
+        <h3>Add book details</h3><br>
+        <label for="title">Title</label>
+        <input id="title"  type="text" formControlName="title" >
+        <div class="err" *ngIf="addBookForm.controls['title'].dirty && addBookForm.controls['title'].errors?.['required']">
+            Please enter title  
+        </div>
+        <label for="author">Author</label>
+        <input id="author"  type="text" formControlName="author" >
+        <div class="err" *ngIf="addBookForm.controls['author'].dirty && addBookForm.controls['author'].errors?.['required']">
+            Please enter author  
+        </div>
+        <label for="category">Category </label>
+        <input id="category"  type="text" formControlName="category" >
+        <div class="err" *ngIf="addBookForm.controls['category'].dirty && addBookForm.controls['category'].errors?.['required']">
+            Please enter category  
+        </div>
+        <label for="year">Year</label>
+        <input id="year"  type="number" formControlName="year" >
+        <div class="err" *ngIf="addBookForm.controls['published year'].dirty && addBookForm.controls['year'].errors?.['required']">
+            Please enter year  
+        </div>
+        <label for="description">Description</label>
+        <input id="description"  type="text" formControlName="description" >
+        <div class="err" *ngIf="addBookForm.controls['description'].dirty && addBookForm.controls['description'].errors?.['required']">
+            Please add book description  
+        </div>
+        <label for="pages">Pages</label>
+        <input id="pages"  type="number" formControlName="pages" >
+        <div class="err" *ngIf="addBookForm.controls['pages'].dirty && addBookForm.controls['pages'].errors?.['required']">
+            Please enter number of pages  
+        </div>
+        <label for="image">Image url</label>
+        <input id="image"  type="text" formControlName="image" >
+        <div class="err" *ngIf="addBookForm.controls['image'].dirty && addBookForm.controls['image'].errors?.['required']">
+            Please enter image url  
+        </div>
+        <div>
+            <input class="btn btn-primary" type="submit" [disabled]="!addBookForm.valid">
+        </div>
+        <div class="err" *ngIf="addBookError">
+            <p>Something went wrong.Couldn't add book.</p>
+        </div>
+        
+    </form>
+
+</div>

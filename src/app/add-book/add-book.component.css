@@ -1,0 +1,36 @@
+input.ng-invalid.ng-dirty {
+    border:1px solid hsl(9, 94%, 68%);
+    border-radius: 2px;
+    /* box-shadow: 1px 1px 5px 1px red; */
+}
+form{
+    width: 70%;
+    
+}
+input{
+    width:100%;
+    border-radius:0.2rem;
+    margin-bottom: .3rem;
+}
+.err{
+    text-align: right;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+}
+
+.card1{
+    margin:1rem 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    margin: 2rem 0;
+    background-color: rgb(43, 85, 255);
+
+
+}

@@ -1,24 +1,40 @@
-<div class="title">
-    <h3>{{bookData.title}}</h3>
-</div>
-<div class="image">
-    <img src="" alt="">
-</div>
-<div class="author">
-    <p>{{bookData.author}}</p>
-</div>
-<div class="group">
-    <div class="category">
-        <p>{{bookData.category}}</p>
+<div class="card1">
+    <div class="title">
+        <h2>{{bookData.title}}</h2>
     </div>
-    <div class="pages">
-        <p>{{bookData.pages}} pages</p>
+    <div class="image">
+        <img src="https://cdn.windowsreport.com/wp-content/uploads/2020/04/Book-Cover.jpg" alt="">
     </div>
+    <div class="details">
+        {{bookData.description}}
+    </div>
+    
+    <div class="group">
+        <div class="item author">
+            written by {{bookData.author}}
+        </div>
+        <div class="item category">
+            category: {{bookData.category}}
+        </div>
+        <div class="item year">
+            published on {{bookData.year}}  
+        </div>
+        <div class="item pages">
+            {{bookData.pages}} pages    
+        </div>
+        <div class="item added">
+            added on {{bookData.addedOn|date}}  
+        </div>
+    </div>
+    <div class="buttons">
+            <button class="btn btn-primary" routerLink="/books/{{bookId}}/edit" >Edit</button>
+            <button class="btn btn-primary" (click)="deleteBook()" >Delete</button>
+    </div>
+    <div class="err" *ngIf="errorOnDelete">
+        <p>Something went wrong.Couldn't delete book.</p>
+    </div> 
+    <div class="err" *ngIf="err">
+        <p>Couldn't fetch book details.</p>
+    </div>  
 </div>
 
-{{bookData|json}}
-{{err}}
-
-<button routerLink="/books/{{bookId}}/edit" >edit</button>
-<button (click)="deleteBook()" >delete</button>
-{{errorOnDelete}}

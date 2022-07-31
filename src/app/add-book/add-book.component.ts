@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -26,7 +25,7 @@ export class AddBookComponent implements OnInit {
       description: new FormControl(null, Validators.required),
       pages: new FormControl(null, Validators.required),
       image: new FormControl(null, Validators.required),
-      addedBy: new FormControl(null),
+      
     })
   }
 
@@ -39,7 +38,7 @@ export class AddBookComponent implements OnInit {
       },
       error:(err)=>{
         console.log(err);      
-        this.addBookError = err.message;
+        this.addBookError = err;
       } 
     })
   }

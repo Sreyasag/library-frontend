@@ -26,7 +26,7 @@
         
             </div> 
             <button type="submit" class="btn btn-primary" [disabled]="logInForm.invalid">Login</button>
-            <div *ngIf="loading">loading...</div>
+            <div class="signin" *ngIf="loading">signing in...</div>
             <p class="err" *ngIf="loginError && !loading">Something went wrong. Please try again.</p>
           </form>
         </div>
