@@ -1,3 +1,16 @@
-<h2>User profile</h2>
-{{userData|json}}
-{{error}}
+<div class="card1">
+    <div class="image">
+        <img src="assets/person.jpg" alt="">
+    </div>
+    <div class="details">
+        <h3>{{userData.name}}</h3><br> 
+        <p>Email: {{userData.email}}</p>
+        <p>Id: {{userData._id}}</p>
+    </div>
+</div>
+<div *ngIf="error">
+    Couldn't load user data
+</div>
+
+
+
