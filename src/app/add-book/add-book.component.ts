@@ -39,6 +39,7 @@ export class AddBookComponent implements OnInit {
       error:(err)=>{
         console.log(err);      
         this.addBookError = err;
+        alert("Something went wrong.Couldn't add book.")
       } 
     })
   }

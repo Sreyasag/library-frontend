@@ -10,6 +10,10 @@ input.ng-invalid.ng-dirty {
     display: flex;
     justify-content: center;
 }
+.h{
+    color: rgb(82, 82, 254);
+    padding: 7rem;
+}
 .wrapper{
     width: 70%;
     

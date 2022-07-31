@@ -10,7 +10,16 @@ import { HttpService } from '../services/http.service';
 })
 export class EditBookComponent implements OnInit {
 
-  editBookForm:any;
+  editBookForm =  new FormGroup({
+    title: new FormControl(null, Validators.required),
+    author: new FormControl(null, Validators.required ),
+    category: new FormControl(null, Validators.required),
+    year: new FormControl(null, Validators.required),
+    description: new FormControl(null, Validators.required),
+    pages: new FormControl(null, Validators.required),
+    image: new FormControl(null, Validators.required),
+    
+  });
   editBookError:any;
   errorOnGetData:any;
   bookId:any;

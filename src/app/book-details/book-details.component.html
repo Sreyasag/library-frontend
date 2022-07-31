@@ -1,29 +1,29 @@
 <div class="card1">
     <div class="title">
-        <h2>{{bookData.title}}</h2>
+        <h2>{{bookData?.title}}</h2>
     </div>
     <div class="image">
         <img src="https://cdn.windowsreport.com/wp-content/uploads/2020/04/Book-Cover.jpg" alt="">
     </div>
     <div class="details">
-        {{bookData.description}}
+        {{bookData?.description}}
     </div>
     
     <div class="group">
         <div class="item author">
-            written by {{bookData.author}}
+            written by {{bookData?.author}}
         </div>
         <div class="item category">
-            category: {{bookData.category}}
+            category: {{bookData?.category}}
         </div>
         <div class="item year">
-            published on {{bookData.year}}  
+            published on {{bookData?.year}}  
         </div>
         <div class="item pages">
-            {{bookData.pages}} pages    
+            {{bookData?.pages}} pages    
         </div>
         <div class="item added">
-            added on {{bookData.addedOn|date}}  
+            added on {{bookData?.addedOn|date}}  
         </div>
     </div>
     <div class="buttons">

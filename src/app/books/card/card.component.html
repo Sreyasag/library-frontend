@@ -1,23 +1,25 @@
 <div class="card1">
-    <div class="image">
-        <img src="https://cdn.windowsreport.com/wp-content/uploads/2020/04/Book-Cover.jpg" alt="">
-    </div>
-    <div class="title">
-        <h3>{{data.title}}</h3>
-    </div>
-    <div class="author">
-        <p>{{data.author}}</p>
-    </div>
-    <div class="group">
-        <div class="category">
-            <p>{{data.category}}</p>
+    <div class="card h-100">
+        <div class="image">
+            <img src="{{data.image}}" alt="">
         </div>
-        <div class="pages">
-            <p>{{data.pages}} pages</p>
+        <div class="title">
+            <h3>{{data.title}}</h3>
         </div>
+        <div class="author">
+            <p>{{data.author}}</p>
+        </div>
+        <div class="group">
+            <div class="category">
+                <p>{{data.category}}</p>
+            </div>
+            <div class="pages">
+                <p>{{data.pages}} pages</p>
+            </div>
+        </div>
+        <div >
+            <button class="details btn btn-secondary" routerLink="/books/{{data._id}}">Details</button>
+        </div>
+    
     </div>
-    <div >
-        <button class="details btn btn-secondary" routerLink="/books/{{data._id}}">Details</button>
-    </div>
-
 </div>
