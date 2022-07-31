@@ -4,9 +4,10 @@ nav{
     justify-content: space-between;
     align-items: center;
     margin-top: 0.6rem;
+    flex-wrap: wrap;
 }
 .card1{
-    padding: 0;
+    padding: .5rem;
 }
 .title{
    /* flex:1; */
@@ -16,16 +17,21 @@ nav{
 }
 
 .navLinks{
-    height: 2rem;
+    min-height: 2rem;
     padding:0 1rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap:2rem;
+    flex-wrap: wrap;
 }
 a{
     text-decoration: none;
 }
 .active{
     font-weight: bold;
+}
+
+.signout{
+    cursor:pointer;
 }

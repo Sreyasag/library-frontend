@@ -35,6 +35,9 @@
             <div>
                 <input type="submit" class="btn btn-primary" [disabled]="signUpForm.invalid" >
             </div>
+            <div class="err" *ngIf="signUpError">
+                <p>Something went wrong.</p>
+            </div>
         </form>
     </div>
 </div>

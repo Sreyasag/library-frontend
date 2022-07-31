@@ -45,3 +45,6 @@ img{
     padding: 1rem 0;
     font-weight: bold;
 }
+.btn:hover{
+    background-color: rgb(255, 67, 67);
+}
