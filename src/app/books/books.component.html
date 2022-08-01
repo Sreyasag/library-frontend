@@ -1,9 +1,6 @@
 
 <div class="row" >
-    <div class="h">
-
-        <app-card *ngFor="let item of booksData" class="col-md-6 col-lg-4 " [data]="item"></app-card>
-    </div>
+    <app-card *ngFor="let item of booksData" class="col-md-6 col-lg-4" [data]="item"></app-card>
 </div>
 <div class="err" *ngIf="error">
     <div><br> Something went wrong. Couldn't load data from server. <br><br></div>

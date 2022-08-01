@@ -1,27 +1,8 @@
 err{
     height:2rem;
 }
-
-/* remove */
-/* .h{
-    display: flex;
-    flex-wrap: wrap ;
-    align-items: stretch;
-    background-color: aqua;
-}
 app-card{
-    display: flex;
-    background-color: blanchedalmond;
-} */
-
-/* .booksContainer{
-    padding: 2rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    
-
+    margin: 1rem 0;
 }
-.book{
-    
-} */
+
+

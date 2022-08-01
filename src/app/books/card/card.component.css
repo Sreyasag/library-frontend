@@ -1,11 +1,10 @@
 
-.card1{
+.card{
     margin: 1rem 0;
     text-align: center;
-    
-}
-.card{
-    border:0;
+    display: flex  ;
+    flex-direction: column ;
+    justify-content: space-between ;
 }
 img{
     width:100%;
@@ -28,6 +27,7 @@ img{
     background-color: rgba(161, 161, 255, 0.43);
     color: black;
     border: 0 ;
+    align-self: flex-end;
 }
 .btn:hover{
     background-color: rgba(146, 146, 255, 0.507);
