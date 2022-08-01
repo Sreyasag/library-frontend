@@ -11,7 +11,18 @@
     padding: 2px;
 }
 
+
 /* body{
-    background-color: rgba(0, 0, 0, 0.899) !important;
-    color: aliceblue !important;
-}    */
+    background-color: rgb(0, 0, 0) !important;
+    color: rgb(207, 207, 207) !important;
+} 
+.card{
+    background-color: rgba(0, 0, 0, 0.72);
+
+}
+.card:hover{
+    background-color: rgba(0, 0, 0, 0.72);
+    box-shadow: 1px 1px 100px 3px rgb(5, 209, 250);
+} */
+
+  
