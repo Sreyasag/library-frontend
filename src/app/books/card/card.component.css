@@ -24,12 +24,12 @@ img{
 }
 .details{
     width: 100%;
-    background-color: rgba(161, 161, 255, 0.43);
+    background-color: rgba(230, 241, 255, 0.951);
     color: black;
     border: 0 ;
     align-self: flex-end;
 }
 .btn:hover{
-    background-color: rgba(146, 146, 255, 0.507);
+    background-color: rgba(180, 226, 255, 0.771);
 }
 

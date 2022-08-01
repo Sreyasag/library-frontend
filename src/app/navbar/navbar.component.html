@@ -1,11 +1,11 @@
 <nav class="card1">    
     <h3 class="title">BooksOcean</h3>
     <div class="navLinks">
-        <a *ngIf="this.auth.isLoggedIn()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="" data-toggle="tooltip" data-placement="bottom" title="All Books">books  <i class="fa-solid fa-book" ></i></a>
-        <a *ngIf="this.auth.isLoggedIn()" routerLinkActive="active" routerLink="books/add"  data-toggle="tooltip" data-placement="bottom" title="Add Book">add <i class="fa-solid fa-plus"></i></a>
-        <a *ngIf="!this.auth.isLoggedIn()" routerLinkActive="active" routerLink="signin"  data-toggle="tooltip" data-placement="bottom" title="Sign In">signin <i class="fa-solid fa-right-to-bracket"></i></a>
-        <a *ngIf="!this.auth.isLoggedIn()" routerLinkActive="active" routerLink="signup"  data-toggle="tooltip" data-placement="bottom" title="Sign Up">signup <i class="fa-solid fa-user-plus"></i></a>
-        <a *ngIf="this.auth.isLoggedIn()" routerLinkActive="active" routerLink="users/{{user._id}}"  data-toggle="tooltip" data-placement="bottom" title="User Profile">user <i class="fa-solid fa-user"></i></a>
-        <a class="signout" *ngIf="this.auth.isLoggedIn()" routerLinkActive="active"  (click)="onLogOut()" data-toggle="tooltip" data-placement="bottom" title="Sign Out">signout <i class="fa-solid fa-right-from-bracket"></i></a>
+        <a *ngIf="this.auth.isLoggedIn()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="" data-toggle="tooltip" data-placement="bottom" title="All Books"><i class="fa-solid fa-book" ></i></a>
+        <a *ngIf="this.auth.isLoggedIn()" routerLinkActive="active" routerLink="books/add"  data-toggle="tooltip" data-placement="bottom" title="Add Book"> <i class="fa-solid fa-plus"></i></a>
+        <a *ngIf="!this.auth.isLoggedIn()" routerLinkActive="active" routerLink="signin"  data-toggle="tooltip" data-placement="bottom" title="Sign In"> <i class="fa-solid fa-right-to-bracket"></i></a>
+        <a *ngIf="!this.auth.isLoggedIn()" routerLinkActive="active" routerLink="signup"  data-toggle="tooltip" data-placement="bottom" title="Sign Up"> <i class="fa-solid fa-user-plus"></i></a>
+        <a *ngIf="this.auth.isLoggedIn()" routerLinkActive="active" routerLink="users/{{user._id}}"  data-toggle="tooltip" data-placement="bottom" title="User Profile"> <i class="fa-solid fa-user"></i></a>
+        <a class="signout" *ngIf="this.auth.isLoggedIn()" routerLinkActive="active"  (click)="onLogOut()" data-toggle="tooltip" data-placement="bottom" title="Sign Out"> <i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
 </nav>

@@ -22,19 +22,22 @@ nav{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap:2rem;
+    gap:3rem;
     flex-wrap: wrap;
 }
 a{
     text-decoration: none;
+    color: rgb(38, 71, 234);
+
 }
 .active{
     font-weight: bold;
+    color: rgb(0, 195, 255);
 }
 
 .signout{
     cursor:pointer;
 }
 i{
-    font-size:2rem;
+    font-size:1.5rem;
 }

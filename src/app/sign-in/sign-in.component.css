@@ -9,20 +9,19 @@ input.ng-invalid.ng-dirty {
     padding: 2rem;
     display: flex;
     justify-content: center;
+    border-radius: .8rem;
 }
 .err{
     text-align: right;
 }
-.h{
-    color: rgb(82, 82, 254);
-    padding: 7rem;
-}
+
 .wrapper{
     width: 70%;
     
 }
 input{
     width:100%;
+    border: 1px solid;
     border-radius:0.2rem;
     margin-bottom: .3rem;
 }
@@ -39,3 +38,36 @@ input{
     padding: .5rem 1rem;
     margin: .5rem;
 }
+.booksimg{
+    width:60%;
+    padding-top: 100px;
+}
+.img1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signincard{
+    align-self: center;
+    padding: 6% 6%;
+    margin-top: 4%;
+}
+.img2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.readingimg{
+    width:60%;
+    padding: 70px 0;
+}
+.tag{
+    display: flex;
+    align-items: center;
+    padding-top: 1%;
+    padding-left: 11.5%;
+    padding-bottom: 3%;
+}
+.lines{
+    font-weight: bold;
+} 

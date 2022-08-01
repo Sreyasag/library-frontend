@@ -1,9 +1,14 @@
 <div class="">
   <div class="row">
-    <div class="col-md-5">
+
+    <div class="col-md-6 img1">
+      <img class="booksimg" src="assets/books2.png" alt="">
+    </div>
+
+    <div class="col-md-6 signincard">
       <div class="card1">
         <div class="wrapper">
-          <h4>Login</h4 >
+          <h4>Sign In</h4 >
           <form (submit)="onSubmit()" #logInForm="ngForm">
             <div>
               <label for="email">Email</label>
@@ -25,18 +30,26 @@
               <div class="err" *ngIf="pass.dirty && pass.invalid">Must be atleast 8 characters long</div>  
         
             </div> 
-            <button type="submit" class="btn btn-primary" [disabled]="logInForm.invalid">Login</button>
+            <button type="submit" class="btn btn-primary" [disabled]="logInForm.invalid">Sign In</button>
             <div class="signin" *ngIf="loading">signing in...</div>
             <p class="err" *ngIf="loginError && !loading">Something went wrong. Please try again.</p>
           </form>
         </div>
       </div>
     </div>
-    <div class="col-md-7">
-      <div class="card1 h">
-        <h2>Deep dive into BooksOcean</h2>
+
+    <div class="col-md-6 tag">
+      <div class="l">
+        <h1 class="lines">BooksOcean <br> Deep dive</h1>
+        <hr>
+        <p >Reading is dreaming with open eyes</p>
       </div>
+
     </div>
+    <div class="col-md-6 img2">
+      <img class="readingimg" src="assets/reading.png" alt="">
+    </div>
+
   </div>
 
 </div>
