@@ -8,6 +8,8 @@ import { HttpService } from '../services/http.service';
 })
 export class BooksComponent implements OnInit {
   booksData: any;
+  error:any;
+  
   constructor(private http: HttpService) { }
 
   ngOnInit(): void {
@@ -19,6 +21,7 @@ export class BooksComponent implements OnInit {
         },
         error:(err)=>{
           console.log(err.message)
+          this.error= err;
         }
       }
     )

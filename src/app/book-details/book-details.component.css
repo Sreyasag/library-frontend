@@ -3,10 +3,10 @@
     margin: 1rem 0;
     text-align: center;
 }
-img{
+.image{
     width:100%;
     border-radius: 0.2rem;
-    
+       
 }
 .title{
     padding: 2rem 0 1rem 0;
@@ -46,5 +46,5 @@ img{
     font-weight: bold;
 }
 .btn:hover{
-    background-color: rgb(255, 67, 67);
+    background-color: rgb(252, 107, 107);
 }

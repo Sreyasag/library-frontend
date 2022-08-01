@@ -4,10 +4,10 @@ input.ng-invalid.ng-dirty {
     /* box-shadow: 1px 1px 5px 1px red; */
 }
 
-.err1{
-    border:1px solid hsl(9, 94%, 68%);
-    border-radius: 2px;
+.err{
+    text-align: right;
 }
+
 label{
     display: block;
 }

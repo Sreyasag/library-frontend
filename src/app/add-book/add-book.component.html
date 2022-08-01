@@ -19,7 +19,7 @@
         </div>
         <label for="year">Year</label>
         <input id="year"  type="number" formControlName="year" >
-        <div class="err" *ngIf="addBookForm.controls['published year']?.touched && addBookForm.controls['year'].errors?.['required']">
+        <div class="err" *ngIf="addBookForm.controls['year']?.touched && addBookForm.controls['year'].errors?.['required']">
             Please enter year  
         </div>
         <label for="description">Description</label>
