@@ -7,7 +7,7 @@ import { AuthService } from './auth.service';
 })
 export class HttpService {
 
-  root = 'http://localhost:3000/';
+  root = '';
 
   constructor(private auth:AuthService, private http:HttpClient) { }
 

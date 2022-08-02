@@ -9,18 +9,19 @@ export class AuthService {
 
   token: any;
   currentUser: any= this.getCurrentUser();
-  root = 'http://localhost:3000';
+  root = '';
+  darkMode=false;
 
   constructor(private http: HttpClient) {}
 
   //Log user in
   login(loginData: { email: string; password: string }) {
-    return this.http.post(`${this.root}/users/login`, loginData);
+    return this.http.post(`${this.root}users/login`, loginData);
   }
 
   //Register user
   signUp(userData:any){
-    return this.http.post(`${this.root}/users/signup`, userData);
+    return this.http.post(`${this.root}users/signup`, userData);
   }
 
   //log user out

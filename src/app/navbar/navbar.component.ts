@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
@@ -21,4 +21,5 @@ export class NavbarComponent implements OnInit {
     this.auth.logOut();
     this.router.navigate(['signin'])
   }
+
 }

@@ -27,12 +27,13 @@ input{
 }
 
 .btn{
-    margin: 0.5rem 0;   
+    margin: 0.5rem 0 2rem 0;  
+    width: 100%; 
 }
 
 .signin{
-    display: inline;
     text-align: center;
+    font-size: small;
     background-color: rgba(194, 227, 251, 0.451);
     border-radius: 2rem;
     padding: .5rem 1rem;
@@ -49,7 +50,7 @@ input{
 }
 .signincard{
     align-self: center;
-    padding: 6% 6%;
+    padding: 4% 6%;
     margin-top: 4%;
 }
 .img2{
@@ -59,7 +60,7 @@ input{
 }
 .readingimg{
     width:60%;
-    padding: 70px 0;
+    padding: 20px 0 ;
 }
 .tag{
     display: flex;
